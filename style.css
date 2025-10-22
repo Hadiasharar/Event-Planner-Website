@@ -1,0 +1,440 @@
+/* ----- COLOR VARIABLES -----*/
+:root {
+  --c-1: #FFECC0;
+  --c-2: #FFC29B;
+  --c-3: #F39F9F;
+  --c-4: #B95E82;
+  --c-5: #FFF1F1;
+  --c-6: #D9E9CF;
+  --c-7: #FFD5D5;
+  --text-dark: #124170;
+  --muted: #6b6b6b;
+}
+
+/* ---- RESET ----- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background: var(--c-5);
+  scroll-behavior: smooth;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Links */
+a { color: var(--c-4); text-decoration: none; }
+a:hover { color: var(--c-3); text-decoration: underline; }
+
+/* ..... NAVBAR ......*/
+.site-navbar {
+  background: linear-gradient(180deg, var(--c-1), var(--c-2));
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(185,94,130,0.08);
+}
+.site-navbar .navbar-brand {
+  font-weight: 700;
+  color: var(--c-4);
+}
+.site-navbar .nav-link {
+  color: var(--text-dark);
+  margin: 0 .35rem;
+  font-weight: 600;
+}
+.site-navbar .nav-link:hover {
+  color: var(--c-3);
+}
+
+/* ............... HOME SECTION ...... */
+.home {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(255, 236, 192, 0.7),
+      rgba(255, 213, 213, 0.7)
+    ),
+    url("imgs/HOME0.0.1537.webp") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4A2C2A;
+  padding: 2rem;
+}
+.home-subtitle { font-size: 1.8rem; color: var(--c-4); }
+.home-title { font-size: 3rem; font-weight: bold; color: #4A2C2A; margin-bottom: 1.5rem; }
+.btn-home {
+  background: var(--c-4);
+  color: #FFF1F1;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.btn-home:hover { background: var(--c-3); color: #4A2C2A; }
+
+/* ---- ABOUT ----- */
+.about-text h2 { color: var(--c-4); font-weight: 700; }
+.about-text .lead { color: var(--c-3); font-weight: 600; }
+.about-text p { color: var(--text-dark); }
+.about-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ----- SERVICES ------ */
+.service-card {
+  animation: fadeIn 1s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--c-5), #fff);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.service-card img { height: 230px; object-fit: cover; }
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+.service-card h5 { color: var(--c-3); font-weight: 700; }
+
+/* ----- PACKAGES ----- */
+.price-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#packages .price-box {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 992px) { #packages .price-box { flex: 1 1 45%; } }
+@media (max-width: 600px) { #packages .price-box { flex: 1 1 100%; } }
+
+#packages .price-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.price-box {
+  flex: 0 1 calc(33.333% - 1rem); 
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(185,94,130,0.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .price-box {
+    flex: 0 1 calc(50% - 1rem); 
+  }
+}
+
+@media (max-width: 600px) {
+  .price-box {
+    flex: 0 1 100%; 
+  }
+}
+
+.price-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+.price-box .pakage { color: var(--c-4); font-weight: 800; }
+.price-box .amount { color: var(--c-3); font-weight: 800; }
+
+/* ---GALLERY---*/
+.gallery-img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery-img:hover { transform: scale(1.05); }
+
+/* ----- CONTACT ------*/
+#contact {
+  background: #FFF1F1;
+  padding: 4rem 0;
+  color: #4A2C2A;
+}
+#contact h2 {
+  color: var(--c-4);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#contact button {
+  background: var(--c-4);
+  color: #FFF1F1;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+#contact button:hover {
+  background: var(--c-3);
+  color: #4A2C2A;
+}
+
+/* ------ FOOTER ---- */
+.site-footer {
+  background: linear-gradient(180deg, var(--c-1), var(--c-6));
+  color: var(--c-4);
+  padding: 2rem 0 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.site-footer a { color: var(--text-dark); }
+.site-footer a:hover { color: var(--c-3); }
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .home-title { font-size: 1.6rem; }
+  .price-box { width: 47%; }
+}
+@media (max-width: 480px) {
+  .price-box { width: 90%; }
+  .home-title { font-size: 1.3rem; }
+}
+
+/* ---- LOGIN PAGE ONLY ---- */
+.login-page {
+  background: linear-gradient(135deg, #ffe6e6, #fff0f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-page .login-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 360px;
+  padding: 30px;
+}
+.login-page .login-card h2 {
+  text-align: center;
+  color: #c6538c;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.login-page .btn-login {
+  background-color: #c6538c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.login-page .btn-login:hover { background-color: #a94475; }
+.login-page #loginError {
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+  font-weight: 500;
+}
+
+/* Prevent login card from showing anywhere else */
+body:not(.login-page) .login-card {
+  display: none;
+}
+
+/* ----- DARK MODE ----- */
+body.dark-mode {
+  background: #121212;
+  color: #e6e6e6;
+}
+body.dark-mode .site-navbar {
+  background: linear-gradient(180deg, #1c1c1c, #333);
+}
+body.dark-mode .home {
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(0, 0, 0, 0.6)),
+    url("imgs/HOME0.0.1537.webp") no-repeat center/cover;
+}
+body.dark-mode .price-box,
+body.dark-mode .service-card {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  border-color: rgba(255,255,255,0.05);
+}
+body.dark-mode #contact {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+body.dark-mode .site-footer {
+  background: #181818;
+  color: #ccc;
+}
+body.dark-mode a { color: #f39f9f; }
+
+
+/* Choose Plan buttons */
+.choose-plan,
+.price-box button,
+.btn-choose-plan {
+  background-color: #c6538c !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+.choose-plan:hover,
+.price-box button:hover,
+.btn-choose-plan:hover {
+  background-color: #a94475 !important;
+}
+
+/* Book Appointment button */
+.book-btn,
+#bookBtn,
+button[type="submit"] {
+  background-color: #c6538c !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+.book-btn:hover,
+#bookBtn:hover,
+button[type="submit"]:hover {
+  background-color: #a94475 !important;
+}
+
+/* Subscribe button */
+.subscribe-btn,
+#subscribeBtn,
+input[type="submit"] {
+  background-color: #c6538c !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+.subscribe-btn:hover,
+#subscribeBtn:hover,
+input[type="submit"]:hover {
+  background-color: #a94475 !important;
+}
+
+
+/* Section Headings like "Choose Your Plan", "Subscribe", etc. */
+h2, h3.section-title {
+  color: #c6538c !important;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Choose Plan buttons */
+button.chooseBtn,
+button.btn-choose-plan,
+.price-box button {
+  background-color: #c6538c !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.chooseBtn:hover,
+button.btn-choose-plan:hover,
+.price-box button:hover {
+  background-color: #a94475 !important;
+}
+
+/* Book Appointment button */
+#bookBtn,
+.book-btn {
+  background-color: #c6538c !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#bookBtn:hover,
+.book-btn:hover {
+  background-color: #a94475 !important;
+}
+
+/* Subscribe button */
+#subscribeBtn,
+.subscribe-btn,
+input[type="submit"][value="Subscribe"] {
+  background-color: #c6538c !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#subscribeBtn:hover,
+.subscribe-btn:hover,
+input[type="submit"][value="Subscribe"]:hover {
+  background-color: #a94475 !important;
+}
+
+/* Background for Plan section */
+#priceContainer, .plans-section {
+  background-color: #fff5f8;
+  padding: 40px 0;
+  border-radius: 12px;
+}
+
+
+.btn-about {
+    background-color:  #c6538c;
+    color: #fff;               
+    border: none;              
+    padding: 10px 20px;        
+    border-radius: 8px;        
+    transition: all 0.3s ease; 
+    display: inline-block;
+    text-decoration: none;     
+}
+
+.btn-about:hover {
+    background-color: #a94475; 
+    color: #fff;
+}
+
+
+#packages .price-box {
+  background-color: #fff;       
+  border: 1px solid #ddd;      
+  padding: 20px;                
+  border-radius: 10px;          
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;                 
+}
+#packages .price-box .btn {
+  margin-top: auto;            
+}

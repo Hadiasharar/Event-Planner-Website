@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <!--Favicon-->
+<link rel="icon" type="image/png" href="favicon_png/android-chrome-192x192.png">
+</head>
+<body>
+
+  <h1>Welcome to your Dashboard</h1>
+  <p id="welcomeUser"></p>
+  <button id="logoutBtn">Logout</button>
+
+
+
+  <script>
+    
+    const username = localStorage.getItem("username");
+    if (!username) {
+      // User is not logged in, redirect to login page
+      window.location.href = "login.html";
+    } else {
+      // Show welcome message
+      document.getElementById("welcomeUser").textContent = "Hello, " + username + "!";
+    }
+
+    // ✅ Logout button
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+      localStorage.removeItem("username");
+      window.location.href = "login.html";
+    });
+  </script>
+
+</body>
+</html>

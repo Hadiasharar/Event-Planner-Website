@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HS Wedding & Henna Planners</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="style.css">
+
+<!--Favicon-->
+<link rel="icon" type="image/png" href="favicon_png/android-chrome-192x192.png">
+
+
+
+</head>
+<body>
+  <script>
+  // ✅ Prevent access if not logged in
+if (!localStorage.getItem("username")) {
+  alert("Please log in first!");
+  window.location.href = "login.html";
+}
+</script>
+
+
+
+  <div class="login-card">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-login w-100">Login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light site-navbar">
+    <div class="container">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+         <a class="navbar-brand" href="#">HS Wedding & Henna Planners</a>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link" id="loginNav">Login</a></li>
+          <li class="nav-item"><a href="#" class="nav-link d-none" id="logoutNav">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+ <!-- HOME SECTION -->
+  <section class="home" id="home" aria-label="Home hero">
+    <div class="content text-center">
+      <p class="home-subtitle">Let's Plan Your Dream Event</p>
+      <h1 class="home-title">Let's Organize Afghan Weddings <i class="fa-solid fa-heart"></i></h1>
+      <a href="#contact" class="btn btn-home">Contact Us</a>
+    </div>
+  </section>
+
+
+       <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 about-text">
+          <h2>About Afghan Wedding Event Planner</h2>
+          <p class="lead">We specialize in creating unforgettable Afghan weddings that blend tradition with modern elegance.</p>
+          <p>From intimate henna nights to grand wedding receptions, we handle every detail with care, creativity, and cultural respect. Our team ensures each event is unique, personal, and filled with joy.</p>
+
+          <ul class="list-unstyled about-features mt-3">
+            <li><i class="fa-solid fa-check"></i> Expert event planning & coordination</li>
+            <li><i class="fa-solid fa-check"></i> Traditional Afghan ceremonies & modern touches</li>
+            <li><i class="fa-solid fa-check"></i> Beautiful venue decoration & styling</li>
+            <li><i class="fa-solid fa-check"></i> Professional photography & videography</li>
+          </ul>
+          <a href="#contact" class="btn btn-about mt-3">Plan Your Event</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="imgs/8201dc9c06aa461c1d7405b3125b55eb.webp" alt="Afghan Wedding Planning" class="img-fluid rounded shadow about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+       <!-- SERVICES -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Services</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card service-card h-100">
+            <img src="imgs/afghan-dj-uplighting-avif.webp" class="card-img-top" alt="Wedding Night">
+            <div class="card-body text-center">
+              <h5>Wedding Night</h5>
+              <p>Wedding ceremony planning & decoration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card service-card h-100">
+            <img src="imgs/fd8f0c17af4093b59bd9c3028c415738.webp" class="card-img-top" alt="Reception">
+            <div class="card-body text-center">
+              <h5>Reception</h5>
+              <p>Venue styling, catering, and music coordination for an unforgettable reception.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card service-card h-100">
+            <img src="imgs/printed-wedding-photos-with-the-bride-and-groom-a-vintage-black-camera-and-woman-hands-with.webp" class="card-img-top" alt="Photography">
+            <div class="card-body text-center">
+              <h5>Photography</h5>
+              <p>Photo & video coverage packages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- PACKAGES -->
+<section id="packages" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Choose Your Plan</h2>
+    <div class="row g-3" id="priceContainer" >
+
+      
+      <!-- Henna Night -->
+      <div class="price-box">
+        <h3 class="package">Henna Night</h3>
+        <h3 class="amount">€2000</h3>
+        <p><i class="fa-solid fa-square-check"></i> 4-6 Hrs Coverage</p>
+        <p><i class="fa-solid fa-square-check"></i> Traditional Afghan Henna Setup</p>
+        <p><i class="fa-solid fa-square-check"></i> Stage & Table Decoration</p>
+        <p><i class="fa-solid fa-square-check"></i> Henna Artist & Cultural Arrangements</p>
+        <p><i class="fa-solid fa-square-check"></i> Professional Photography & Videography</p>
+        <p><i class="fa-solid fa-square-check"></i> Edited Digital Photos</p>
+        <p><i class="fa-solid fa-square-check"></i> Online Gallery</p>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+
+      <!-- Wedding Ceremony -->
+      <div class="price-box">
+        <h3 class="package">Wedding Ceremony</h3>
+        <h3 class="amount">€4500</h3>
+        <p><i class="fa-solid fa-square-check"></i> Full-Day Coverage (8-10 Hrs)</p>
+        <p><i class="fa-solid fa-square-check"></i> Venue Styling & Floral Arrangements</p>
+        <p><i class="fa-solid fa-square-check"></i> Bridal & Groom Session</p>
+        <p><i class="fa-solid fa-square-check"></i> Engagement Ceremony Capture</p>
+        <p><i class="fa-solid fa-square-check"></i> Stage Decoration & Lighting</p>
+        <p><i class="fa-solid fa-square-check"></i> Professional Photo & Video Editing</p>
+        <p><i class="fa-solid fa-square-check"></i> Online Gallery & USB Delivery</p>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+
+      <!-- Complete Celebration -->
+      <div class="price-box">
+        <h3 class="package">Complete Celebration</h3>
+        <h3 class="amount">€6000</h3>
+        <p><i class="fa-solid fa-square-check"></i> Full-Day Coverage of All Events</p>
+        <p><i class="fa-solid fa-square-check"></i> Multi-Event Coordination & Styling</p>
+        <p><i class="fa-solid fa-square-check"></i> Stage, Tables & Venue Decoration</p>
+        <p><i class="fa-solid fa-square-check"></i> Entertainment & Music Arrangement</p>
+        <p><i class="fa-solid fa-square-check"></i> Professional Photography & Videography</p>
+        <p><i class="fa-solid fa-square-check"></i> Edited Digital Images & Online Gallery</p>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Henna Night Carousel -->
+<section class="py-5 bg-white" id="hennaCarouselSection">
+  <div class="container">
+    <h2 class="text-center mb-4">Henna Night Gallery</h2>
+
+    <div id="hennaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+     
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#hennaCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- slide 1 -->
+        <div class="carousel-item active">
+          <img src="imgs/8c2a3ea6746adfd29dbfb0e972f0a6f0.webp"
+               class="d-block w-100"
+               alt="Henna Ceremony"
+                style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Henna Ceremony</h5>
+            <p>Afghan Henna Night Welcome Sign 🪔</p>
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="carousel-item">
+          <img src="imgs/3c933fed16423b51062a9f7b8c8d16a4.webp"
+               class="d-block w-100"
+               alt="Henna Dress"
+                style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Henna Dress</h5>
+            <p>An Afghan henna night dress is a vibrant and elegant outfit.</p>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="carousel-item">
+          <img src="imgs/2db1f3d2eca2d5ad9c037723326a5e32.webp"
+               class="d-block w-100"
+               alt="Stage Decor"
+               style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Stage Decor</h5>
+            <p>Afghan Henna Night stage decor.</p>
+          </div>
+        </div>
+
+        <!-- slide 4 -->
+        <div class="carousel-item">
+          <img src="imgs/61ca15db4446240158f7e68320b12fff.webp"
+               class="d-block w-100"
+               alt="Henna"
+                style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Henna</h5>
+            <p>Henna symbolizes joy, beauty, and good fortune.</p>
+          </div>
+        </div>
+
+        <!-- slide 5 -->
+        <div class="carousel-item">
+          <img src="imgs/7d33e24676f937592ec650d413b8c01c.webp"
+               class="d-block w-100"
+               alt="Dance"
+                style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Dance</h5>
+            <p>Dancing & Music</p>
+          </div>
+        </div>
+
+        <!-- slide 6 -->
+        <div class="carousel-item">
+          <img src="imgs/f571ceea68c34221f9a86c7538cf3ef8.webp"
+               class="d-block w-100"
+               alt="My Beautiful Culture"
+                style="height:80vh; width:100%; object-fit:cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>My Beautiful Culture</h5>
+            <p>Traditional pre-wedding celebration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#hennaCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hennaCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- end of  Henna Carousel -->
+
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="imgs/feaace002f0d4af808dc2d51a4ef56ab.webp" class="img-fluid gallery-img" alt="Reception"></div>
+        <div class="col-md-4"><img src="imgs/f737315853d299145ade4aff7b41a746.webp" class="img-fluid gallery-img" alt="Reception"></div>
+        <div class="col-md-4"><img src="imgs/9d8620b96386ef7513e48927be473903.webp" class="img-fluid gallery-img" alt="Reception"></div>
+      </div>
+      <div class="row g-3 mt-3">
+        <div class="col-md-4"><img src="imgs/90b648d28e1c75c1823d10367f8bf91c.webp" class="img-fluid gallery-img" alt="Photography"></div>
+        <div class="col-md-4"><img src="imgs/e7db2e26e6744bb813a18255a70006eb.webp" class="img-fluid gallery-img" alt="Photography"></div>
+        <div class="col-md-4"><img src="imgs/589a72ef53a6d11a8798d143b0260846.webp" class="img-fluid gallery-img" alt="Photography"></div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- REVIEW -->
+  <section id="review" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-3">Client Reviews</h2>
+      <div id="reviewsContainer" aria-live="polite">
+        <p>⭐⭐⭐⭐⭐ "They made our wedding unforgettable!"</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- APPOINTMENT SECTION -->
+<section id="appointment" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Book an Appointment</h2>
+    <p class="text-center mb-4">Reserve your meeting for wedding planning or event consultation.</p>
+    <form id="appointmentForm" class="mx-auto" style="max-width:500px;">
+      <div class="mb-3">
+        <label for="appointName" class="form-label">Your Name</label>
+        <input type="text" id="appointName" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="appointDate" class="form-label">Preferred Date</label>
+        <input type="date" id="appointDate" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="appointTime" class="form-label">Preferred Time</label>
+        <input type="time" id="appointTime" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="appointNote" class="form-label">Notes</label>
+        <textarea id="appointNote" class="form-control" rows="3" placeholder="Write your note..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+    </form>
+  </div>
+</section>
+
+
+
+<!-- CONTACT section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h3><i class="fa-solid fa-magnifying-glass-location"></i> Find Us</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303354.5552627784!2d9.598178189627937!3d53.55852679578954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b161837e1813b9%3A0x4263df27bd63aa0!2sHamburg!5e0!3m2!1sen!2sde!4v1757926323088!5m2!1sen!2sde" 
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <div class="col-md-6">
+        <h3>Contact Us</h3>
+        <p>We'd love to hear from you! Fill out the form below:</p>
+        <form id="contactForm">
+          <div class="mb-3">
+            <p>Enter Your Name:</p>
+            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <p>Enter Your Email:</p>
+            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <p>Enter Your Phone Number:</p>
+            <input type="text" id="mobile" class="form-control" placeholder="Your Mobile" required>
+          </div>
+          <div class="mb-3">
+            <p>Write Your Message:</p>
+            <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-4 mb-4">
+        <h2 class="footer-title">Afghan Wedding Event Planner</h2>
+        <p class="footer-text">
+          We create unforgettable Afghan wedding experiences in Germany, blending tradition and modern elegance. 
+          From henna nights to grand receptions, every detail is carefully planned with love and creativity.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Locations -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-subtitle">Popular Locations</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#"><i class="fa-solid fa-circle-arrow-right"></i> Berlin</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-arrow-right"></i> Hamburg</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-arrow-right"></i> Munich</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-arrow-right"></i> Hanover</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-arrow-right"></i> Frankfurt</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-subtitle">Subscribe</h5>
+        <p class="footer-text">Get updates on our latest Afghan wedding packages and events.</p>
+        <div class="subscribe-box d-flex">
+          <input type="email" class="form-control me-2" placeholder="Enter your email">
+          <button class="btn btn-dark">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Dark MODE-->
+     <button id="darkModeBtn" class="btn btn-dark position-fixed bottom-0 end-0 m-3">🌙</button>
+
+
+    <div class="footer-bottom text-center pt-4 mt-4 border-top">
+      <p class="mb-0">© 2025 Afghan Wedding Event Planner. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

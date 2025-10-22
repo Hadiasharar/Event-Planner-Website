@@ -1,0 +1,45 @@
+{
+  "users": [
+    {"username": "alice", "password": "123456"},
+    {"username": "bob", "password": "password"}
+  ],
+  "events": [
+    {
+      "name": "Henna Night",
+      "price": 2500,
+      "img": "https://imgs.search.brave.com/Cf5ps34C5FWd20li-GGLJaErygF7jnG45DVmdMCbYbU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzk2L2Nl/LzFlLzk2Y2UxZWMy/MjZmYjMzN2FhNGZm/NWJjOGUwZjQyNTVm/LmpwZw",
+      "features": [
+        "4-6 Hrs Coverage",
+        "Traditional Afghan Henna Setup",
+        "Stage & Table Decoration",
+        "Henna Artist & Cultural Arrangements",
+        "Professional Photography & Videography",
+        "Edited Digital Photos",
+        "Online Gallery"
+      ]
+    },
+    {
+      "name": "Reception",
+      "price": 2000,
+      "img": "https://imgs.search.brave.com/hZ8uE0-_w7EFxK1W9Mqbi4B40Qj58EvE9sKioXz6_Z8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFydGhhc3Rld2Fy/dC5jb20vdGhtYi9Q/eVlkRzRGelVpeFVP/TFBVQ3pRUmgxYnNz/bXc9LzE1MDB4MC9m/aWx0ZXJzOm5vX3Vw/c2NhbGUoKTptYXhf/Ynl0ZXMoMTUwMDAw/KTpzdHJpcF9pY2Mo/KS9icm9va2UtamFt/ZXMtd2VkZGluZy1y/ZWNlcHRpb24tMDQy/Mi1lNzM0ODA4NTEy/YTM0NTk3OWRmYjI2/Yjg1YTEzMmU3OC5q/cGc",
+      "features": [
+        "Venue styling",
+        "Catering",
+        "Music coordination",
+        "Full reception planning",
+        "Professional photography"
+      ]
+    },
+    {
+      "name": "Photo Package",
+      "price": 1500,
+      "img": "https://imgs.search.brave.com/uNQMu92bPjyekWfIrGss9uNSWSVY1d_FWllAeVCFmyo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzZlLzk4/L2Y1LzZlOThmNTg1/NTBlNGM4NzdhNjE1/YTNjZDYzYjY4MDEz/LmpwZw ",
+      "features": [
+        "Photo & video coverage",
+        "Edited images",
+        "Online gallery access",
+        "USB delivery"
+      ]
+    }
+  ]
+}
